@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nilai">Nilai :</label>
+    <input onchange="konversi()" id="nilai" type="text" placeholder="Masukan Nilai...">
+    <br>
+    <p id="hasil"></p>
+</body>
+<script>
+
+    function konversi(){
+        let nilai = document.getElementById('nilai').value
+        let hasil = document.getElementById('hasil')
+
+        let result
+        if(nilai >= 82){
+            result = "A"
+        } else if(nilai >= 70) {
+            result = "B"
+        } else if(nilai >= 55) {
+            result = "C"
+        } else {
+            result = "D"
+        }
+        
+        hasil.innerHTML = `Mutu Nilai : ${result}`
+    }
+
+</script>
+</html>
